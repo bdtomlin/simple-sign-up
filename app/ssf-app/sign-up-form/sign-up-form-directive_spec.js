@@ -15,9 +15,9 @@ describe("signupForm", function () {
   });
 
   it("should render the signup form", function () {
-    expect(element.find('[name="first-name"]')).toBeTruthy();
-    expect(element.find('[name="last-name"]')).toBeTruthy();
-    expect(element.find('[name="email"]')).toBeTruthy();
-    expect(element.find('.brand-logo')).toBeTruthy();
+    expect(element.find('input[name="first-name"]').length).toBe(1);
+    expect(element.find('input[name="last-name"]').length).toBe(1);
+    expect(element.find('input[name="email"]').length).toBe(1);
+    expect(element.find('.brand-logo').length).toBe(1);
   });
 });
