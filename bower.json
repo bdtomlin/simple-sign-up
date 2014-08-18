@@ -17,8 +17,10 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "angular": "~1.2.21",
-    "angular-route": "~1.2.21"
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "~1.2.22",
+    "angular-mocks": "~1.2.22",
+    "angular-route": "~1.2.22"
   }
 }

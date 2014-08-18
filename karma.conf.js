@@ -17,7 +17,9 @@ for(var i=0, l=scripts.length; i<l; i++){
   fileList.push(src);
 }
 fileList.push('./app/bower_components/angular-mocks/angular-mocks.js');
-fileList.push('./app/cac-app/**/*_spec.js');
+fileList.push('./app/ssf-app/**/*_spec.js');
+fileList.push('./app/ssf-app/**/*.html');
+fileList.unshift('node_modules/jquery/dist/jquery.min.js');
 
 module.exports = function(config) {
   config.set({
@@ -42,8 +44,13 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*.html': 'html2js'
     },
 
+    ngHtml2JsPreprocessor: {
+        // strip app from the file path
+        stripPrefix: 'app/'
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
