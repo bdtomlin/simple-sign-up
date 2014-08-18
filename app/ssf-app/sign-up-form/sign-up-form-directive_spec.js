@@ -1,5 +1,5 @@
 describe("signupForm", function () {
-  var scope, element, compiled, html, someone;
+  var scope, element, compiled, html;
 
   beforeEach(function(){
     module('ssf-app/sign-up-form/sign-up-form-template.html');
